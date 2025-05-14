@@ -41,7 +41,7 @@ int flame = LOW ;
 #define SwitchPin2 0 //D3 
 #define SwitchPin3 9 //SD2
 #define wifiLed 16 //D0
-// comment the following line if you use a toggle switches instead of tactile buttons
+//comment the following line if you use a toggle switches instead of tactile buttons
 //#define TACTILE_BUTTON 1
 #define BAUD_RATE 115200
 #define DEBOUNCE_TIME 250
@@ -110,7 +110,7 @@ when flipSwitch was pressed last time (used to debounce / limit events)
  String deviceId = flipSwitch.second.deviceId; // get the deviceId from config
  int relayPIN = devices[deviceId].relayPIN; // get the relayPIN from config
  bool newRelayState = !digitalRead(relayPIN); // set the new relay State
- digitalWrite(relayPIN, !newRelayState); // set the trelay to the new state
+ digitalWrite(relayPIN, !newRelayState); // set the trelay to new state
  SinricProSwitch &mySwitch = SinricPro[deviceId]; // get Switch device from SinricPro
  mySwitch.sendPowerStateEvent(newRelayState); // send the event
 #ifdef TACTILE_BUTTON
